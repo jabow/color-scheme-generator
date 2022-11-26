@@ -1,0 +1,59 @@
+/* ##### START TOP BAR ##### */
+.top-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+.flex-grow-half {
+	flex-grow: 0.1;
+}
+
+/* ##### END TOP BAR ##### */
+
+/* ##### START COLOURS ##### */
+
+#colors {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.color {
+	border: 1px solid black;
+	height: 50vh;
+	width: auto;
+}
+
+#color1 {
+	background-color: red;
+}
+#color2 {
+	background-color: black;
+}
+#color3 {
+	background-color: green;
+}
+#color4 {
+	background-color: blue;
+}
+#color5 {
+	background-color: violet;
+}
+
+#hex-code {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.hex {
+	border: 1px solid black;
+	width: auto;
+}
+
+/* ##### END COLOURS ##### */
