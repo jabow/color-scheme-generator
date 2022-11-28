@@ -5,6 +5,21 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="index.css" />
+		<link rel="icon" type="image/png" href="Favicon/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script
+			src="https://kit.fontawesome.com/95625e95a1.js"
+			crossorigin="anonymous"
+		></script>
 		<title>Color Scheme Generator</title>
 	</head>
 	<body>
@@ -27,6 +42,7 @@
 			</select>
 			<button class="flex-grow-half">Get color scheme</button>
 			<div class="flex-grow"></div>
+			<a class="fa-solid fa-moon btn-toggle" id="theme"></a>
 		</form>
 		<div id="colors">
 			<div id="color1" class="color flex-grow"></div>
@@ -36,11 +52,11 @@
 			<div id="color5" class="color flex-grow"></div>
 		</div>
 		<div id="hex-code">
-			<div id="hex1" class="flex-grow hex"></div>
-			<div id="hex2" class="flex-grow hex"></div>
-			<div id="hex3" class="flex-grow hex"></div>
-			<div id="hex4" class="flex-grow hex"></div>
-			<div id="hex5" class="flex-grow hex"></div>
+			<div id="hex1" class="flex-grow hex" onclick="copy(this)"></div>
+			<div id="hex2" class="flex-grow hex" onclick="copy(this)"></div>
+			<div id="hex3" class="flex-grow hex" onclick="copy(this)"></div>
+			<div id="hex4" class="flex-grow hex" onclick="copy(this)"></div>
+			<div id="hex5" class="flex-grow hex" onclick="copy(this)"></div>
 		</div>
 		<script src="index.js"></script>
 	</body>

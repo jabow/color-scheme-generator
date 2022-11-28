@@ -1,10 +1,11 @@
 body {
 	margin: 0;
-	color: white;
-	background: #1f2937;
+	color: black;
+	background: white;
+	font-family: "Inter", sans-serif !important;
 }
 
-/* ##### START TOP BAR ##### */
+/* ##### TOP BAR ##### */
 .top-bar {
 	display: flex;
 	flex-direction: row;
@@ -16,37 +17,35 @@ body {
 
 .color-picker {
 	height: 5vh;
-	/* margin-right: 20px; */
 	border: 0.5px solid #313131;
 }
 
 #mode-selector,
 .color-picker,
+.btn-toggle,
+.hex,
 button:hover {
 	cursor: pointer;
 }
 
 #mode-selector {
-	/* margin-right: 20px; */
+	font-family: "Inter", sans-serif !important;
 	padding: 9px 13px;
-	background: #1f293a;
-	/* gray/300 */
-
 	border: 1px solid #d1d5db;
-	/* shadow/sm */
-
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 	border-radius: 6px;
-	color: white;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 button {
-	background: #3d4b60;
-	/* shadow/sm */
-
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 	border-radius: 4px;
-	color: white;
+	font-family: "Inter", sans-serif !important;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 16px;
 }
 
 .flex-grow {
@@ -63,7 +62,7 @@ button {
 
 /* ##### END TOP BAR ##### */
 
-/* ##### START COLOURS ##### */
+/* ##### COLOURS ##### */
 
 #colors {
 	display: flex;
@@ -72,7 +71,6 @@ button {
 }
 
 .color {
-	/* border: 1px solid black; */
 	height: 85vh;
 	width: auto;
 }
@@ -87,7 +85,32 @@ button {
 
 .hex {
 	text-align: center;
-	/* border: 1px solid black; */
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 24px;
 }
 
 /* ##### END COLOURS ##### */
+
+/* ##### DARK THEME ##### */
+
+body.dark-theme {
+	color: #f3f4f6;
+	--tw-bg-opacity: 1;
+	background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
+
+body.dark-theme #mode-selector {
+	background: #1f293a;
+	color: white;
+}
+
+body.dark-theme button {
+	background: #3d4b60;
+	color: white;
+}
+
+#theme {
+	height: 12px;
+}
+/* ##### END DARK THEME ##### */
