@@ -18,6 +18,23 @@ body {
 .color-picker {
 	height: 5vh;
 	border: 0.5px solid #313131;
+	background-color: transparent;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+}
+
+.color-picker::-webkit-color-swatch {
+	border: 2px solid;
+	border-radius: 10px;
+	border-color: var(--border-color, black);
+}
+
+.color-picker::-moz-color-swatch {
+	border: 2px solid;
+	border-color: var(--border-color, black);
+	border-radius: 10px;
 }
 
 #mode-selector,
@@ -97,17 +114,22 @@ button {
 body.dark-theme {
 	color: #f3f4f6;
 	--tw-bg-opacity: 1;
-	background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+	--border-color: white;
+	background-color: #1f2937; /*rgba(17, 24, 39, var(--tw-bg-opacity));*/
 }
 
 body.dark-theme #mode-selector {
-	background: #1f293a;
+	background: #1f2937; /*#1f293a;*/
 	color: white;
 }
 
 body.dark-theme button {
 	background: #3d4b60;
 	color: white;
+}
+
+body {
+	transition-duration: 300ms;
 }
 
 #theme {

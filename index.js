@@ -2,8 +2,10 @@ const colorInput = document.getElementById("color-picker");
 const modeInput = document.getElementById("mode-selector");
 const form = document.getElementById("get-scheme");
 
-form.addEventListener("submit", function (e) {
-	e.preventDefault();
+fetchColorScheme();
+getTheme();
+
+function fetchColorScheme() {
 	const color = colorInput.value.slice(1);
 	const mode = modeInput.value;
 
@@ -22,6 +24,11 @@ form.addEventListener("submit", function (e) {
 		.then((data) => {
 			renderColors(data.colors);
 		});
+}
+
+form.addEventListener("submit", function (e) {
+	e.preventDefault();
+	fetchColorScheme();
 });
 
 function renderColors(colorArray) {
@@ -52,7 +59,6 @@ function copy(hexValue) {
 	navigator.clipboard.writeText(hexValue.innerText);
 }
 
-getTheme();
 //Get users system theme setting
 
 function getTheme() {
